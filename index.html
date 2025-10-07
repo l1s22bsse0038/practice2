@@ -1,6 +1,12 @@
 <!doctype html>
 <html lang="en">
 	<head>
+		<!--
+			index.html - Simple Todo App
+			Author: Zeeshan
+			Created: 2025
+			Notes: Small accessible todo list application. Uses localStorage to persist todos.
+		-->
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<meta name="description" content="Small accessible todo app with localStorage persistence" />
@@ -8,18 +14,24 @@
 		<link rel="stylesheet" href="style.css" />
 	</head>
 	<body>
+		<!-- Main application container -->
 		<main class="app" aria-labelledby="app-title">
+			<!-- App header / title -->
 			<header class="app__header">
 				<h1 id="app-title">Hello — This is a Heading</h1>
 				<p class="lead">A tiny accessible todo list — add, edit, complete, and filter. Persisted in localStorage.</p>
 			</header>
 
+
+			<!-- Todo section: add form, filters, and list -->
 			<section class="todo">
+				<!-- Add todo form -->
 				<form id="todo-form" class="todo__form" aria-label="Add todo">
 					<input id="todo-input" class="todo__input" type="text" placeholder="What needs doing?" autocomplete="off" />
 					<button id="add-btn" class="btn" type="submit">Add</button>
 				</form>
 
+				<!-- Controls: filters and meta actions -->
 				<div class="todo__controls">
 					<div class="filters" role="tablist" aria-label="Filter todos">
 						<button class="filter-btn active" data-filter="all" role="tab">All</button>
@@ -32,9 +44,11 @@
 					</div>
 				</div>
 
+				<!-- Todo list (populated by script.js) -->
 				<ul id="todo-list" class="todo__list" aria-live="polite"></ul>
 			</section>
 
+			<!-- Inline app footer -->
 			<footer class="app__footer">
 				<small>Open <code>index.html</code> in your browser to run this app locally.</small>
 			</footer>
