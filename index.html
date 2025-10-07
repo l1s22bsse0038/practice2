@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>Simple Todo App</title>
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body>
+		<main class="app" aria-labelledby="app-title">
+			<header class="app__header">
+				<h1 id="app-title">Todos</h1>
+				<p class="lead">A tiny accessible todo list — add, edit, complete, and filter. Persisted in localStorage.</p>
+			</header>
+
+			<section class="todo">
+				<form id="todo-form" class="todo__form" aria-label="Add todo">
+					<input id="todo-input" class="todo__input" type="text" placeholder="What needs doing?" autocomplete="off" />
+					<button id="add-btn" class="btn" type="submit">Add</button>
+				</form>
+
+				<div class="todo__controls">
+					<div class="filters" role="tablist" aria-label="Filter todos">
+						<button class="filter-btn active" data-filter="all" role="tab">All</button>
+						<button class="filter-btn" data-filter="active" role="tab">Active</button>
+						<button class="filter-btn" data-filter="completed" role="tab">Completed</button>
+					</div>
+					<div class="todo__meta">
+						<span id="remaining-count">0</span> left
+						<button id="clear-completed" class="btn btn--muted">Clear completed</button>
+					</div>
+				</div>
+
+				<ul id="todo-list" class="todo__list" aria-live="polite"></ul>
+			</section>
+
+			<footer class="app__footer">
+				<small>Built locally — open <code>index.html</code> in your browser.</small>
+			</footer>
+		</main>
+
+		<script src="script.js" defer></script>
+	</body>
+</html>
