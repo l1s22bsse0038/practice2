@@ -65,12 +65,14 @@
 			const editBtn = document.createElement('button');
 			editBtn.className = 'icon-btn edit';
 			editBtn.title = 'Edit';
+			editBtn.type = 'button';
 			editBtn.textContent = 'Edit';
 			editBtn.addEventListener('click', () => startEdit(todo.id, li));
 
 			const deleteBtn = document.createElement('button');
 			deleteBtn.className = 'icon-btn delete';
 			deleteBtn.title = 'Delete';
+			deleteBtn.type = 'button';
 			deleteBtn.textContent = 'Delete';
 			deleteBtn.addEventListener('click', () => removeTodo(todo.id));
 
